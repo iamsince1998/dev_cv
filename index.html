@@ -84,20 +84,20 @@ h1.name .out{color:transparent;-webkit-text-stroke:2px var(--or);}
 .reveal.hidden{opacity:0;transform:translateY(22px);}
 .reveal.slide-left.hidden{transform:translateX(-20px);}
 
-/* EXP */
+/* EXP ACCORDION — native details/summary, no JS needed */
 .exp-list{display:flex;flex-direction:column;gap:3px;}
-.ec{background:var(--pn);border:1px solid var(--br);overflow:hidden;cursor:pointer;transition:border-color .25s;}
-.ec:hover,.ec.open{border-color:var(--or);}
-.ec-h{display:flex;justify-content:space-between;align-items:center;padding:clamp(14px,2.5vw,22px) clamp(16px,3vw,26px);gap:12px;flex-wrap:wrap;}
+details.ec{background:var(--pn);border:1px solid var(--br);transition:border-color .25s;border-radius:2px;}
+details.ec:hover,details.ec[open]{border-color:var(--or);}
+details.ec summary.ec-h{display:flex;justify-content:space-between;align-items:center;padding:clamp(14px,2.5vw,22px) clamp(16px,3vw,26px);gap:12px;flex-wrap:wrap;cursor:pointer;user-select:none;list-style:none;}
+details.ec summary.ec-h::-webkit-details-marker{display:none;}
+details.ec summary.ec-h::marker{display:none;}
 .ec-r{font-family:'Rajdhani',sans-serif;font-size:clamp(16px,2.4vw,21px);font-weight:700;color:var(--wh);}
 .ec-c{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--or);margin-top:3px;}
 .ec-m{display:flex;align-items:center;gap:12px;flex-shrink:0;}
 .ec-p{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--mt);white-space:nowrap;}
-.ec-t{width:26px;height:26px;border:1px solid var(--br);display:flex;align-items:center;justify-content:center;color:var(--or);font-size:18px;font-weight:300;transition:transform .3s;}
-.ec.open .ec-t{transform:rotate(45deg);}
-.ec-b{max-height:0;overflow:hidden;transition:max-height .4s ease;}
-.ec.open .ec-b{max-height:700px;}
-.ec-bi{padding:clamp(14px,2.5vw,20px) clamp(16px,3vw,26px);border-top:1px solid var(--br);}
+.ec-t{width:26px;height:26px;border:1px solid var(--br);display:flex;align-items:center;justify-content:center;color:var(--or);font-size:20px;line-height:1;transition:transform .3s;font-family:'JetBrains Mono',monospace;}
+details.ec[open] .ec-t{transform:rotate(45deg);}
+.ec-b{padding:clamp(14px,2.5vw,20px) clamp(16px,3vw,26px);border-top:1px solid var(--br);}
 .ec-ul{list-style:none;display:flex;flex-direction:column;gap:8px;}
 .ec-ul li{padding-left:20px;position:relative;font-size:13px;color:var(--tx);line-height:1.65;}
 .ec-ul li::before{content:'▶';position:absolute;left:0;top:5px;color:var(--or);font-size:8px;}
@@ -285,47 +285,47 @@ h1.name .out{color:transparent;-webkit-text-stroke:2px var(--or);}
     <div class="sec-lbl">WORK HISTORY</div>
     <h2 class="sec-h"><em>Experience</em></h2>
     <div class="exp-list">
-      <div class="ec open reveal slide-left" onclick="toggleEc(this)">
-        <div class="ec-h">
+      <details class="ec" open>
+        <summary class="ec-h">
           <div><div class="ec-r">Senior Unreal Engine Developer <span style="font-size:13px;color:var(--gn);font-family:'JetBrains Mono',monospace;font-weight:400;">· Lead</span></div><div class="ec-c">Shaurya Infosoft PVT. LTD &nbsp;·&nbsp; 🇮🇳 India</div></div>
           <div class="ec-m"><div class="ec-p">Feb 2025 – Present</div><div class="ec-t">+</div></div>
-        </div>
-        <div class="ec-b"><div class="ec-bi"><ul class="ec-ul">
+        </summary>
+        <div class="ec-b"><ul class="ec-ul">
           <li>Lead developer for VR multiplayer titles shipped on Meta Quest platform</li>
           <li>Architected AWS GameLift FlexMatchmaking + custom matchmaking for MMA Cage Conquest and Archery Master VR</li>
           <li>Lead developer on Thrust Hunter VR — 3 complete game modes: Race vs AI, Lap Mode, Checkpoints</li>
           <li>Lead developer on Paintball Arena VR (Sep 2025) — full gameplay, AWS matchmaking, EOS voice chat, AI offline mode, mixed BP/C++ for performance</li>
           <li>Led sprint planning, milestone tracking, code reviews, and mentoring of junior developers</li>
           <li>Handled direct client communication — requirements gathering, progress updates, and delivery sign-off</li>
-        </ul></div></div>
-      </div>
-      <div class="ec reveal slide-left" onclick="toggleEc(this)">
-        <div class="ec-h">
+        </ul></div>
+      </details>
+      <details class="ec">
+        <summary class="ec-h">
           <div><div class="ec-r">Senior Unreal Engine Developer</div><div class="ec-c">Monster Bunny Studios &nbsp;·&nbsp; 🌏 Asia</div></div>
           <div class="ec-m"><div class="ec-p">Nov 2023 – Jan 2025</div><div class="ec-t">+</div></div>
-        </div>
-        <div class="ec-b"><div class="ec-bi"><ul class="ec-ul">
+        </summary>
+        <div class="ec-b"><ul class="ec-ul">
           <li>Senior developer on Phantom Blaze — competitive multiplayer shooter on Steam &amp; Google Play</li>
           <li>Engineered fully replicated weapon system, character customisation, and persistent saving</li>
           <li>Multiple replicated game modes (TDM+) for players and AI bots simultaneously</li>
           <li>Full AI pipeline: Blackboard, Behaviour Tree, custom Tasks, Services, Decorators</li>
           <li>Steam + AWS GameLift integration; replicated minimap, compass, lethals &amp; melee systems</li>
           <li>FX/SFX via code &amp; AnimNotifies: muzzle flash, bullet impacts, footstep sounds</li>
-        </ul></div></div>
-      </div>
-      <div class="ec reveal slide-left" onclick="toggleEc(this)">
-        <div class="ec-h">
+        </ul></div>
+      </details>
+      <details class="ec">
+        <summary class="ec-h">
           <div><div class="ec-r">Indie Developer &amp; Freelance Contractor</div><div class="ec-c">iamsince1998 &nbsp;·&nbsp; 🇺🇸 USA · 🇬🇧 UK · 🇪🇺 Europe · 🌏 Asia</div></div>
           <div class="ec-m"><div class="ec-p">Feb 2020 – Present</div><div class="ec-t">+</div></div>
-        </div>
-        <div class="ec-b"><div class="ec-bi"><ul class="ec-ul">
+        </summary>
+        <div class="ec-b"><ul class="ec-ul">
           <li>Sole developer of IndianOps — cross-platform multiplayer shooter on Steam &amp; Google Play</li>
           <li>All disciplines solo: animation, AI, networking, UI, gameplay mechanics, platform publishing</li>
           <li>EOS cross-platform login, listen server matchmaking, TDM, Capture the Flag, touch &amp; Enhanced Input</li>
           <li>Freelance contracts with studios across USA, UK, Europe &amp; Asia — shipped titles include Thicket, Soul Survival, Dad Discovers the Internet</li>
           <li>Managed full project lifecycle on contracts: scoping, delivery, client feedback, and final handoff</li>
-        </ul></div></div>
-      </div>
+        </ul></div>
+      </details>
     </div>
   </section>
 
@@ -573,7 +573,7 @@ h1.name .out{color:transparent;-webkit-text-stroke:2px var(--or);}
         <h3>Open for <em>Opportunities</em></h3>
         <div>
           <div class="cd-item"><span class="cd-icon">📍</span><span>Haryana, India</span></div>
-          <div class="cd-item"><span class="cd-icon">📞</span><a href="tel:+918813804043">+91 8813804043</a></div>
+
           <div class="cd-item"><span class="cd-icon">✉</span><a href="/cdn-cgi/l/email-protection#7d1e1213091c1e094f141c100e14131e184c4444453d1a101c1411531e1210"><span class="__cf_email__" data-cfemail="6d0e0203190c0e195f040c001e04030e085c5454552d0a000c0401430e0200">[email&#160;protected]</span></a></div>
           <div class="cd-item"><span class="cd-icon">🔗</span><a href="https://www.linkedin.com/in/iamsince1998" target="_blank">linkedin.com/in/iamsince1998</a></div>
         </div>
@@ -655,7 +655,7 @@ function frame(){
 frame();
 
 /* ACCORDION */
-function toggleEc(c){c.classList.toggle('open');}
+/* ACCORDION — handled by native details/summary above */
 
 /* SCROLL REVEAL — progressive enhancement, never blocks content */
 if('IntersectionObserver' in window){
