@@ -75,7 +75,11 @@ h1.name .out{color:transparent;-webkit-text-stroke:2px var(--or);}
 .sk:hover{background:var(--cd);transform:translateY(-3px);border-color:var(--or);box-shadow:0 8px 22px rgba(232,98,10,.12);}
 .sk.b:hover{border-color:var(--cy);box-shadow:0 8px 22px rgba(34,211,238,.08);}
 
-/* SCROLL REVEAL — opt-in via JS, never blocks content */
+/* GLOBAL STRIP */
+.global-strip{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:20px;padding:12px 18px;background:rgba(232,98,10,.06);border:1px solid rgba(232,98,10,.2);border-left:3px solid var(--or);width:fit-content;animation:fu .6s .72s both;}
+.gs-item{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--wh);}
+.gs-sep{color:var(--or);font-weight:700;}
+@media(max-width:500px){.global-strip{width:100%;}}
 .reveal{transition:opacity .5s ease, transform .5s ease;}
 .reveal.hidden{opacity:0;transform:translateY(22px);}
 .reveal.slide-left.hidden{transform:translateX(-20px);}
@@ -219,15 +223,27 @@ h1.name .out{color:transparent;-webkit-text-stroke:2px var(--or);}
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-tag">SENIOR UNREAL ENGINE DEVELOPER · PORTFOLIO 2025</div>
+    <div class="hero-tag">SENIOR UNREAL ENGINE DEVELOPER · PORTFOLIO 2026</div>
     <h1 class="name">DEE<span class="out">PAK</span></h1>
     <div class="hero-role">UE4 / UE5 · C++ · BLUEPRINTS · MULTIPLAYER SPECIALIST<span class="tc"></span></div>
-    <p class="hero-bio">5+ years shipping commercial games across PC, VR, Mobile &amp; Console. Deep expertise in multiplayer architecture — AWS GameLift, EOS, Steam, Photon, PlayFab, Edgegap. From solo indie dev to senior team contributor with 10+ shipped titles. Also publishing Unreal Engine plugins on Fab Marketplace.</p>
+    <p class="hero-bio">5+ years shipping commercial games across PC, VR, Mobile &amp; Console. Deep expertise in multiplayer architecture — AWS GameLift, EOS, Steam, Photon, PlayFab, Edgegap. Collaborated with studios across <strong style="color:var(--wh)">USA, UK, Europe &amp; Asia</strong>. 1+ year leading teams as Lead Developer — planning, code reviews, mentoring, and client communication. Publishing Unreal Engine plugins on Fab Marketplace.</p>
     <div class="stats">
       <div class="stat"><div class="sn">5<span>+</span></div><div class="sl">YEARS EXP</div></div>
       <div class="stat"><div class="sn">10<span>+</span></div><div class="sl">SHIPPED TITLES</div></div>
-      <div class="stat"><div class="sn">4</div><div class="sl">PLATFORMS</div></div>
+      <div class="stat"><div class="sn">1<span>+</span></div><div class="sl">YR LEADING</div></div>
+      <div class="stat"><div class="sn">4</div><div class="sl">REGIONS</div></div>
       <div class="stat"><div class="sn">2</div><div class="sl">FAB PLUGINS</div></div>
+    </div>
+    <div class="global-strip">
+      <span class="gs-item">🇺🇸 USA</span>
+      <span class="gs-sep">·</span>
+      <span class="gs-item">🇬🇧 UK</span>
+      <span class="gs-sep">·</span>
+      <span class="gs-item">🇪🇺 Europe</span>
+      <span class="gs-sep">·</span>
+      <span class="gs-item">🌏 Asia</span>
+      <span class="gs-sep">·</span>
+      <span class="gs-item">🌐 Remote-First</span>
     </div>
     <div class="btns">
       <a href="#contact" class="btn btn-p">✉ Hire Me</a>
@@ -259,6 +275,8 @@ h1.name .out{color:transparent;-webkit-text-stroke:2px var(--or);}
       <div class="sk b reveal"><span class="i">◈</span>UMG Widgets &amp; UI</div>
       <div class="sk b reveal"><span class="i">◈</span>VR Dev (Meta Quest)</div>
       <div class="sk b reveal"><span class="i">◈</span>GameMode / GameState / GI</div>
+      <div class="sk reveal" style="border-left-color:var(--gd);"><span class="i" style="color:var(--gd);">◈</span>Team Lead &amp; Code Reviews</div>
+      <div class="sk reveal" style="border-left-color:var(--gd);"><span class="i" style="color:var(--gd);">◈</span>Sprint &amp; Milestone Planning</div>
     </div>
   </section>
 
@@ -269,7 +287,7 @@ h1.name .out{color:transparent;-webkit-text-stroke:2px var(--or);}
     <div class="exp-list">
       <div class="ec open reveal slide-left" onclick="toggleEc(this)">
         <div class="ec-h">
-          <div><div class="ec-r">Senior Unreal Engine Developer</div><div class="ec-c">Shaurya Infosoft PVT. LTD</div></div>
+          <div><div class="ec-r">Senior Unreal Engine Developer <span style="font-size:13px;color:var(--gn);font-family:'JetBrains Mono',monospace;font-weight:400;">· Lead</span></div><div class="ec-c">Shaurya Infosoft PVT. LTD &nbsp;·&nbsp; 🇮🇳 India</div></div>
           <div class="ec-m"><div class="ec-p">Feb 2025 – Present</div><div class="ec-t">+</div></div>
         </div>
         <div class="ec-b"><div class="ec-bi"><ul class="ec-ul">
@@ -277,11 +295,13 @@ h1.name .out{color:transparent;-webkit-text-stroke:2px var(--or);}
           <li>Architected AWS GameLift FlexMatchmaking + custom matchmaking for MMA Cage Conquest and Archery Master VR</li>
           <li>Lead developer on Thrust Hunter VR — 3 complete game modes: Race vs AI, Lap Mode, Checkpoints</li>
           <li>Lead developer on Paintball Arena VR (Sep 2025) — full gameplay, AWS matchmaking, EOS voice chat, AI offline mode, mixed BP/C++ for performance</li>
+          <li>Led sprint planning, milestone tracking, code reviews, and mentoring of junior developers</li>
+          <li>Handled direct client communication — requirements gathering, progress updates, and delivery sign-off</li>
         </ul></div></div>
       </div>
       <div class="ec reveal slide-left" onclick="toggleEc(this)">
         <div class="ec-h">
-          <div><div class="ec-r">Senior Unreal Engine Developer</div><div class="ec-c">Monster Bunny Studios</div></div>
+          <div><div class="ec-r">Senior Unreal Engine Developer</div><div class="ec-c">Monster Bunny Studios &nbsp;·&nbsp; 🌏 Asia</div></div>
           <div class="ec-m"><div class="ec-p">Nov 2023 – Jan 2025</div><div class="ec-t">+</div></div>
         </div>
         <div class="ec-b"><div class="ec-bi"><ul class="ec-ul">
@@ -295,14 +315,15 @@ h1.name .out{color:transparent;-webkit-text-stroke:2px var(--or);}
       </div>
       <div class="ec reveal slide-left" onclick="toggleEc(this)">
         <div class="ec-h">
-          <div><div class="ec-r">Indie Game Developer</div><div class="ec-c">iamsince1998 (Self-Employed)</div></div>
+          <div><div class="ec-r">Indie Developer &amp; Freelance Contractor</div><div class="ec-c">iamsince1998 &nbsp;·&nbsp; 🇺🇸 USA · 🇬🇧 UK · 🇪🇺 Europe · 🌏 Asia</div></div>
           <div class="ec-m"><div class="ec-p">Feb 2020 – Present</div><div class="ec-t">+</div></div>
         </div>
         <div class="ec-b"><div class="ec-bi"><ul class="ec-ul">
           <li>Sole developer of IndianOps — cross-platform multiplayer shooter on Steam &amp; Google Play</li>
           <li>All disciplines solo: animation, AI, networking, UI, gameplay mechanics, platform publishing</li>
           <li>EOS cross-platform login, listen server matchmaking, TDM, Capture the Flag, touch &amp; Enhanced Input</li>
-          <li>Freelance titles shipped on Steam: Thicket, Soul Survival, Dad Discovers the Internet, and others</li>
+          <li>Freelance contracts with studios across USA, UK, Europe &amp; Asia — shipped titles include Thicket, Soul Survival, Dad Discovers the Internet</li>
+          <li>Managed full project lifecycle on contracts: scoping, delivery, client feedback, and final handoff</li>
         </ul></div></div>
       </div>
     </div>
@@ -533,6 +554,13 @@ h1.name .out{color:transparent;-webkit-text-stroke:2px var(--or);}
         <li>UMG Widgets, Animations, bindings</li><li>Replicated HUD: minimap, compass, scores</li>
         <li>C++ &amp; Blueprint hybrid workflows</li><li>FX/SFX via code and AnimNotifies</li>
       </ul></div>
+      <div class="dp reveal" style="border-top-color:var(--gd);"><div class="dp-h" style="color:var(--gd);"><span class="dp-icon">⬡</span>Leadership</div><ul class="dp-ul">
+        <li>1+ year as Lead Developer on shipped VR titles</li>
+        <li>Sprint planning, milestone tracking, task delegation</li>
+        <li>Code reviews and mentoring junior developers</li>
+        <li>Direct client communication — US, UK, EU &amp; Asian studios</li>
+        <li>Remote-first, async-comfortable across time zones</li>
+      </ul></div>
     </div>
   </section>
 
@@ -546,7 +574,7 @@ h1.name .out{color:transparent;-webkit-text-stroke:2px var(--or);}
         <div>
           <div class="cd-item"><span class="cd-icon">📍</span><span>Haryana, India</span></div>
           <div class="cd-item"><span class="cd-icon">📞</span><a href="tel:+918813804043">+91 8813804043</a></div>
-          <div class="cd-item"><span class="cd-icon">✉</span><a href="mailto:contact2iamsince1998@gmail.com">contact2iamsince1998@gmail.com</a></div>
+          <div class="cd-item"><span class="cd-icon">✉</span><a href="/cdn-cgi/l/email-protection#7d1e1213091c1e094f141c100e14131e184c4444453d1a101c1411531e1210"><span class="__cf_email__" data-cfemail="6d0e0203190c0e195f040c001e04030e085c5454552d0a000c0401430e0200">[email&#160;protected]</span></a></div>
           <div class="cd-item"><span class="cd-icon">🔗</span><a href="https://www.linkedin.com/in/iamsince1998" target="_blank">linkedin.com/in/iamsince1998</a></div>
         </div>
         <div>
@@ -585,13 +613,13 @@ h1.name .out{color:transparent;-webkit-text-stroke:2px var(--or);}
   </section>
 
   <div class="footer">
-    <div class="footer-copy">© 2025 <span>Deepak</span> · Senior Unreal Engine Developer · Haryana, India</div>
+    <div class="footer-copy">© 2026 <span>Deepak</span> · Senior Unreal Engine Developer · Haryana, India</div>
     <div class="footer-copy">Built with <span>♥</span> &amp; Unreal Engine</div>
   </div>
 
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 /* CURSOR GLOW */
 const glw=document.getElementById('glw');
 window.addEventListener('mousemove',e=>{glw.style.left=e.clientX+'px';glw.style.top=e.clientY+'px';});
@@ -681,13 +709,4 @@ async function submitForm(){
     }
   }catch(e){
     res.textContent='⚠ Network error. Please email contact2iamsince1998@gmail.com directly.';
-    res.className='f-msg err';res.style.display='block';
-  }
-  btn.textContent='SEND MESSAGE ➤';btn.disabled=false;
-}
-document.querySelectorAll('.contact-form input,.contact-form select').forEach(el=>{
-  el.addEventListener('keydown',e=>{if(e.key==='Enter')submitForm();});
-});
-</script>
-</body>
-</html>
+    res.className='f-msg err';res.style.d
