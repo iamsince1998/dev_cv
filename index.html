@@ -606,7 +606,7 @@ details.ec[open] .ec-t{transform:rotate(45deg);}
           </select>
         </div>
         <div class="fg"><label>MESSAGE</label><textarea id="f-msg" placeholder="Tell me about your project or opportunity..."></textarea></div>
-        <button class="f-submit" id="f-btn" onclick="submitForm()">SEND MESSAGE ➤</button>
+        <button class="f-submit" id="f-btn">SEND MESSAGE ➤</button>
         <div class="f-msg" id="f-result"></div>
       </div>
     </div>
@@ -709,4 +709,22 @@ async function submitForm(){
     }
   }catch(e){
     res.textContent='⚠ Network error. Please email contact2iamsince1998@gmail.com directly.';
-    res.className='f-msg err';res.style.d
+    res.className='f-msg err';res.style.display='block';
+  }
+  btn.textContent='SEND MESSAGE ➤';btn.disabled=false;
+}
+
+/* Attach all event listeners after DOM ready */
+document.addEventListener('DOMContentLoaded', function() {
+  /* Submit button */
+  var btn = document.getElementById('f-btn');
+  if(btn) btn.addEventListener('click', submitForm);
+
+  /* Enter key on form fields */
+  document.querySelectorAll('.contact-form input, .contact-form select').forEach(function(el){
+    el.addEventListener('keydown', function(e){ if(e.key==='Enter') submitForm(); });
+  });
+});
+</script>
+</body>
+</html>
